@@ -1,0 +1,252 @@
+[{
+  "_id": {
+    "$oid": "68f73746254df91445f33936"
+  },
+  "address": "0x17eE62a5e8499B87Bc93ce3888F50Ca2DC3143EF",
+  "private_key": "0x5d3ffaa88622e0d3af5fcec8010da36eb5460477853a87fac6ac42c511a99ad8",
+  "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about",
+  "balance": 0.769436,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T07:33:26.906Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f73749254df91445f33938"
+  },
+  "address": "0xfb9Dd887a02c492F18128c3b7934f34B09Cf900c",
+  "private_key": "0x3af940e9255f4b14390b723501ca8eddeb3f26a5d90384b416969c150567d0f9",
+  "seed_phrase": "adult arrange all armed army anger alert absent any antenna ahead already",
+  "balance": 4.259656,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T07:33:29.441Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f73756254df91445f3393e"
+  },
+  "address": "0xE31f3495f97758FBe99Ed209Ec544d1F7c294957",
+  "private_key": "0x8be0492eb86ee2aedb3480d3620f4863ea539c0567ba5b72d1d3103f470571ca",
+  "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about",
+  "balance": 4.107992,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T07:33:42.196Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f7375b254df91445f33941"
+  },
+  "address": "0x306d47fd2cc8F837c919Fdb7F49fC593075cf133",
+  "private_key": "0x1b0355d0317a33be47b3cf46099839acf2b5cbc25ceaba19fcccb72fea79e158",
+  "seed_phrase": "across actual almost approve armor aerobic add allow aisle analyst abuse around",
+  "balance": 4.279014,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T07:33:47.333Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f73765254df91445f33946"
+  },
+  "address": "0xA7cEd852AEc0efEDbD6771b0f9022a6BB7357aef",
+  "private_key": "0xac33d06973585fb50ad194c47b047e94a9cc083b4810da4e0d16790fa15611fe",
+  "seed_phrase": "armed adapt arrest argue arrive acquire apart aisle among amateur alter addict",
+  "balance": 3.004909,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T07:33:57.515Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f73768254df91445f33948"
+  },
+  "address": "0x14Bf64b1dE9ca9e8296E37Aee806daa1BE5677EB",
+  "private_key": "0x19419550a203ddba2a9e070acd02371788136c4d4e2cc5c5e9b3af640d79bfab",
+  "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about",
+  "balance": 2.276984,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T07:34:00.080Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f79499da4bd5509930eae9"
+  },
+  "address": "0x3C90eab4826917783F60A68697fb15848090E0dd",
+  "private_key": "0xa0463b2d1eea30c54d10352f01c6455d41748ac3b4d914a1ccf5a843751925f8",
+  "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about",
+  "balance": 3.505789,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T14:11:37.044Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f7949bda4bd5509930eaeb"
+  },
+  "address": "0xf6Ce301a6A009B5162f2F733AfB155912a93E59E",
+  "private_key": "0xc20463fd120b47f91e072f6f836421e90df7a4c26195c7a40dfdd3b297756afb",
+  "seed_phrase": "album april adapt area animal angry amazing among alarm adult animal almost",
+  "balance": 4.792707,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T14:11:39.589Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f794a5da4bd5509930eaf0"
+  },
+  "address": "0x696f39778CDFa8a77C4cbf112aE7d45FF7623494",
+  "private_key": "0xb27c4f1231fd41fc9b26c20c2c61ae02127310184738da6e7269cd5823de8780",
+  "seed_phrase": "approve anger adult agree announce arm abandon approve album approve apple acid",
+  "balance": 1.093257,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T14:11:49.761Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f794adda4bd5509930eaf4"
+  },
+  "address": "0xE83a1ecEb03E235925123A354C4dC6676D93987B",
+  "private_key": "0xebdef5a18c9fc8ea886e05624559cb70f4679b8be1ad291ca5ae1d6b9653b68d",
+  "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about",
+  "balance": 1.53417,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T14:11:57.373Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f794b5da4bd5509930eaf8"
+  },
+  "address": "0x9E4feb416A45f38F2D986aC29440b069C4A359Cf",
+  "private_key": "0xfb2bf52db60f51dc65e3d47284b30f40d366f69b0841e92d529ed87c6c2defab",
+  "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about",
+  "balance": 4.394766,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T14:12:05.024Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f794b7da4bd5509930eafa"
+  },
+  "address": "0x84e17A63a551403242F5ae39F10958BADB092194",
+  "private_key": "0xae183c3365a3922e71e4a1686da86e1e9e9efccf9f116098947d2839830ff97a",
+  "seed_phrase": "airport across air absorb adjust alone add ancient arctic apology alcohol antenna",
+  "balance": 3.511228,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T14:12:07.571Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f794c5da4bd5509930eafe"
+  },
+  "address": "0xCA611D46FB321dDcFB9Ab3228ad3049E441450e5",
+  "private_key": "0xba53bc1c4b518e7d83f55a339997394a4f6438e9c5c43a38014c7d4ce584bde4",
+  "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about",
+  "balance": 3.77331,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T14:12:21.498Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f794cada4bd5509930eb01"
+  },
+  "address": "0xB1D6988d8c42e6394E26b8ED6F621700A7BCf0E4",
+  "private_key": "0xe553869e6691a70aa1d41190ab749e4609594221f2de5e13b1f48ebc0d46ff5b",
+  "seed_phrase": "annual army agent airport arrive aerobic anxiety aisle alone arch amount accident",
+  "balance": 4.44591,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T14:12:26.596Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f794d2da4bd5509930eb05"
+  },
+  "address": "0xCA8CF2A76816cFcC8Ed65128996B340afa9B83dE",
+  "private_key": "0xdb6d4a325318d92a1f688b26a5f5a2ff5732994db08179f1a6ed128f81ba8c4d",
+  "seed_phrase": "ancient apology again angle arm apology ahead adapt absorb airport ancient actress",
+  "balance": 0.219887,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T14:12:34.224Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f794d7da4bd5509930eb08"
+  },
+  "address": "0x0c4cE54FEdd8Ec7eAc68A93C0141612C7903a51c",
+  "private_key": "0x36c6a0ce3f261e429453e7bb82e4cf9ebc75ce0668da6eaf151055d9cd17de43",
+  "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about",
+  "balance": 0.227,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T14:12:39.311Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f794deda4bd5509930eb0c"
+  },
+  "address": "0xad4B84aB44908d7F0C301bcA4c2516e66B8BA95C",
+  "private_key": "0xd25e9a216964fdd2d75db460c06304e4322c73ab1ab8be18d78732061e6c1bd6",
+  "seed_phrase": "address afraid adapt also announce amazing alarm admit across adjust appear approve",
+  "balance": 0.935975,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T14:12:46.936Z"
+  },
+  "is_fake": true
+},
+{
+  "_id": {
+    "$oid": "68f794e1da4bd5509930eb0e"
+  },
+  "address": "0x0E68FE59b323c46Fd8CE168Bb2F6c67f1Ad0050c",
+  "private_key": "0xadccb593bda2d3d389f87c5614f2c3394bece0cd572433d72251218538ab07f6",
+  "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about",
+  "balance": 3.71163,
+  "currency": "ETH",
+  "created_at": {
+    "$date": "2025-10-21T14:12:49.489Z"
+  },
+  "is_fake": true
+}]

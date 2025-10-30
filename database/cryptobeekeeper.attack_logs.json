@@ -1,0 +1,1449 @@
+[{
+  "_id": {
+    "$oid": "68f73744254df91445f33934"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:33:24.331Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/transfer",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "137",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "from_address": "0x1111111111111111111111111111111111111111",
+    "to_address": "0x2222222222222222222222222222222222222222",
+    "amount": 1.5
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "transaction_test",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f73746254df91445f33935"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:33:26.872Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/import",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "112",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_import",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f73749254df91445f33937"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:33:29.441Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/create",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "2",
+    "Content-Type": "application/json"
+  },
+  "payload": {},
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_creation",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f7374c254df91445f33939"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:33:32.001Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/wallet/balance",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x1111111111111111111111111111111111111111"
+  },
+  "response_status": 200,
+  "attack_type": "balance_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f7374e254df91445f3393a"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:33:34.552Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/transaction/history",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x3333333333333333333333333333333333333333"
+  },
+  "response_status": 200,
+  "attack_type": "history_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f73751254df91445f3393b"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:33:37.103Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/transaction/history",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x3333333333333333333333333333333333333333"
+  },
+  "response_status": 200,
+  "attack_type": "history_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f73753254df91445f3393c"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:33:39.661Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/transfer",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "137",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "from_address": "0x1111111111111111111111111111111111111111",
+    "to_address": "0x2222222222222222222222222222222222222222",
+    "amount": 1.5
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "transaction_test",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f73756254df91445f3393d"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:33:42.195Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/import",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "112",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_import",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f73758254df91445f3393f"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:33:44.747Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/wallet/balance",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x1111111111111111111111111111111111111111"
+  },
+  "response_status": 200,
+  "attack_type": "balance_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f7375b254df91445f33940"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:33:47.333Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/create",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "2",
+    "Content-Type": "application/json"
+  },
+  "payload": {},
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_creation",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f7375d254df91445f33942"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:33:49.876Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/wallet/balance",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x1111111111111111111111111111111111111111"
+  },
+  "response_status": 200,
+  "attack_type": "balance_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f73760254df91445f33943"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:33:52.429Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/transfer",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "137",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "from_address": "0x1111111111111111111111111111111111111111",
+    "to_address": "0x2222222222222222222222222222222222222222",
+    "amount": 1.5
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "transaction_test",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f73762254df91445f33944"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:33:54.965Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/transaction/history",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x3333333333333333333333333333333333333333"
+  },
+  "response_status": 200,
+  "attack_type": "history_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f73765254df91445f33945"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:33:57.512Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/create",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "2",
+    "Content-Type": "application/json"
+  },
+  "payload": {},
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_creation",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f73768254df91445f33947"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T07:34:00.079Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/import",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "112",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_import",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f79499da4bd5509930eae8"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:11:37.022Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/import",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "112",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_import",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f7949bda4bd5509930eaea"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:11:39.589Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/create",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "2",
+    "Content-Type": "application/json"
+  },
+  "payload": {},
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_creation",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f7949eda4bd5509930eaec"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:11:42.131Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/wallet/balance",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x1111111111111111111111111111111111111111"
+  },
+  "response_status": 200,
+  "attack_type": "balance_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794a0da4bd5509930eaed"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:11:44.674Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/transaction/history",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x3333333333333333333333333333333333333333"
+  },
+  "response_status": 200,
+  "attack_type": "history_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794a3da4bd5509930eaee"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:11:47.216Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/transfer",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "137",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "from_address": "0x1111111111111111111111111111111111111111",
+    "to_address": "0x2222222222222222222222222222222222222222",
+    "amount": 1.5
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "transaction_test",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794a5da4bd5509930eaef"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:11:49.760Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/create",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "2",
+    "Content-Type": "application/json"
+  },
+  "payload": {},
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_creation",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794a8da4bd5509930eaf1"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:11:52.292Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/wallet/balance",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x1111111111111111111111111111111111111111"
+  },
+  "response_status": 200,
+  "attack_type": "balance_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794aada4bd5509930eaf2"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:11:54.835Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/transfer",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "137",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "from_address": "0x1111111111111111111111111111111111111111",
+    "to_address": "0x2222222222222222222222222222222222222222",
+    "amount": 1.5
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "transaction_test",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794adda4bd5509930eaf3"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:11:57.372Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/import",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "112",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_import",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794afda4bd5509930eaf5"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:11:59.923Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/transaction/history",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x3333333333333333333333333333333333333333"
+  },
+  "response_status": 200,
+  "attack_type": "history_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794b2da4bd5509930eaf6"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:02.476Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/transaction/history",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x3333333333333333333333333333333333333333"
+  },
+  "response_status": 200,
+  "attack_type": "history_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794b5da4bd5509930eaf7"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:05.023Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/import",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "112",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_import",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794b7da4bd5509930eaf9"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:07.570Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/create",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "2",
+    "Content-Type": "application/json"
+  },
+  "payload": {},
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_creation",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794bada4bd5509930eafb"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:10.115Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/transfer",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "137",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "from_address": "0x1111111111111111111111111111111111111111",
+    "to_address": "0x2222222222222222222222222222222222222222",
+    "amount": 1.5
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "transaction_test",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794bcda4bd5509930eafc"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:12.663Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/wallet/balance",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x1111111111111111111111111111111111111111"
+  },
+  "response_status": 200,
+  "attack_type": "balance_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794c5da4bd5509930eafd"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:21.497Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/import",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "112",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_import",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794c8da4bd5509930eaff"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:24.045Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/wallet/balance",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x1111111111111111111111111111111111111111"
+  },
+  "response_status": 200,
+  "attack_type": "balance_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794cada4bd5509930eb00"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:26.595Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/create",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "2",
+    "Content-Type": "application/json"
+  },
+  "payload": {},
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_creation",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794cdda4bd5509930eb02"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:29.130Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/transfer",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "137",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "from_address": "0x1111111111111111111111111111111111111111",
+    "to_address": "0x2222222222222222222222222222222222222222",
+    "amount": 1.5
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "transaction_test",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794cfda4bd5509930eb03"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:31.680Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/transaction/history",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x3333333333333333333333333333333333333333"
+  },
+  "response_status": 200,
+  "attack_type": "history_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794d2da4bd5509930eb04"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:34.223Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/create",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "2",
+    "Content-Type": "application/json"
+  },
+  "payload": {},
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_creation",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794d4da4bd5509930eb06"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:36.781Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/wallet/balance",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x1111111111111111111111111111111111111111"
+  },
+  "response_status": 200,
+  "attack_type": "balance_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794d7da4bd5509930eb07"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:39.310Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/import",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "112",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_import",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794d9da4bd5509930eb09"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:41.851Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/transfer",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "137",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "from_address": "0x1111111111111111111111111111111111111111",
+    "to_address": "0x2222222222222222222222222222222222222222",
+    "amount": 1.5
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "transaction_test",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794dcda4bd5509930eb0a"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:44.397Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/transaction/history",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x3333333333333333333333333333333333333333"
+  },
+  "response_status": 200,
+  "attack_type": "history_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794deda4bd5509930eb0b"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:46.936Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/create",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "2",
+    "Content-Type": "application/json"
+  },
+  "payload": {},
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_creation",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794e1da4bd5509930eb0d"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:49.488Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/wallet/import",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "112",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "seed_phrase": "abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon abandon about"
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "wallet_import",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794e4da4bd5509930eb0f"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:52.023Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/transaction/history",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x3333333333333333333333333333333333333333"
+  },
+  "response_status": 200,
+  "attack_type": "history_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794e6da4bd5509930eb10"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:54.576Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "POST",
+  "endpoint": "/api/transfer",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive",
+    "Content-Length": "137",
+    "Content-Type": "application/json"
+  },
+  "payload": {
+    "from_address": "0x1111111111111111111111111111111111111111",
+    "to_address": "0x2222222222222222222222222222222222222222",
+    "amount": 1.5
+  },
+  "query_params": {},
+  "response_status": 200,
+  "attack_type": "transaction_test",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+},
+{
+  "_id": {
+    "$oid": "68f794e9da4bd5509930eb11"
+  },
+  "timestamp": {
+    "$date": "2025-10-21T14:12:57.124Z"
+  },
+  "ip_address": "127.0.0.1",
+  "method": "GET",
+  "endpoint": "/api/wallet/balance",
+  "headers": {
+    "Host": "localhost:5000",
+    "User-Agent": "python-requests/2.31.0",
+    "Accept-Encoding": "gzip, deflate, br, zstd",
+    "Accept": "*/*",
+    "Connection": "keep-alive"
+  },
+  "payload": {},
+  "query_params": {
+    "address": "0x1111111111111111111111111111111111111111"
+  },
+  "response_status": 200,
+  "attack_type": "balance_scan",
+  "user_agent": "python-requests/2.31.0",
+  "geolocation": {
+    "country": "Unknown",
+    "city": "Unknown",
+    "latitude": 0,
+    "longitude": 0
+  }
+}]
