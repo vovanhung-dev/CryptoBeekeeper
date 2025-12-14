@@ -87,9 +87,27 @@ export const analyticsAPI = {
 
 // Honeypot APIs (for testing purposes)
 export const honeypotAPI = {
+  // Lấy danh sách tất cả wallets
+  getWallets: async (limit = 100, skip = 0) => {
+    const response = await api.get('/api/wallet/list', { params: { limit, skip } });
+    return response.data;
+  },
+
+  // Lấy chi tiết wallet
+  getWalletDetail: async (address) => {
+    const response = await api.get(`/api/wallet/${address}`);
+    return response.data;
+  },
+
   // Tạo wallet
   createWallet: async () => {
     const response = await api.post('/api/wallet/create');
+    return response.data;
+  },
+
+  // Xóa wallet
+  deleteWallet: async (address) => {
+    const response = await api.delete(`/api/wallet/${address}`);
     return response.data;
   },
 
@@ -124,6 +142,33 @@ export const honeypotAPI = {
   // Kiểm tra trạng thái transaction
   getTransactionStatus: async (txHash) => {
     const response = await api.get('/api/transaction/status', { params: { hash: txHash } });
+    return response.data;
+  },
+};
+
+// Settings APIs
+export const settingsAPI = {
+  // Lấy tất cả settings
+  getSettings: async () => {
+    const response = await api.get('/api/settings');
+    return response.data;
+  },
+
+  // Lưu settings
+  saveSettings: async (settings) => {
+    const response = await api.post('/api/settings', settings);
+    return response.data;
+  },
+
+  // Lấy database settings
+  getDatabaseSettings: async () => {
+    const response = await api.get('/api/settings/database');
+    return response.data;
+  },
+
+  // Lấy honeypot settings
+  getHoneypotSettings: async () => {
+    const response = await api.get('/api/settings/honeypot');
     return response.data;
   },
 };

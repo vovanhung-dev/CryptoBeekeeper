@@ -142,3 +142,5 @@ mongodb/
 .vite/
 
 *.md
+*.txt
+*.sh

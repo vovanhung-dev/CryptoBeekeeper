@@ -4,6 +4,8 @@ import { ToastProvider } from './components/common/Toast';
 import ErrorBoundary from './components/common/ErrorBoundary';
 import Layout from './components/layout/Layout';
 import Dashboard from './pages/Dashboard';
+import Wallets from './pages/Wallets';
+import Simulation from './pages/Simulation';
 import AttackLogs from './pages/AttackLogs';
 import Analytics from './pages/Analytics';
 import Reports from './pages/Reports';
@@ -17,6 +19,8 @@ function App() {
           <Routes>
             <Route path="/" element={<Layout />}>
               <Route index element={<Dashboard />} />
+              <Route path="wallets" element={<Wallets />} />
+              <Route path="simulation" element={<Simulation />} />
               <Route path="logs" element={<AttackLogs />} />
               <Route path="analytics" element={<Analytics />} />
               <Route path="reports" element={<Reports />} />

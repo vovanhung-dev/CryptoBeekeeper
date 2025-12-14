@@ -1,9 +1,16 @@
 import React from 'react';
-import { formatDistanceToNow } from 'date-fns';
-import { vi } from 'date-fns/locale';
-import { Shield } from 'lucide-react';
+import { Shield, Zap } from 'lucide-react';
+import { formatRelativeTime, parseUTCDate } from '../../utils/formatters';
 
 const RecentAttacks = ({ attacks, onViewAll }) => {
+  // Check if attack is very recent (within 10 seconds)
+  const isVeryRecent = (timestamp) => {
+    const attackTime = parseUTCDate(timestamp);
+    if (!attackTime) return false;
+    const now = new Date();
+    const diffSeconds = (now - attackTime) / 1000;
+    return diffSeconds < 10;
+  };
   const getAttackTypeColor = (type) => {
     const colors = {
       brute_force: 'bg-red-100 text-red-800',
@@ -52,39 +59,51 @@ const RecentAttacks = ({ attacks, onViewAll }) => {
         </div>
       ) : (
         <div className="space-y-3">
-          {attacks.map((attack, index) => (
-            <div
-              key={index}
-              className="flex items-start gap-3 p-3 rounded-md hover:bg-gray-50 transition-colors"
-            >
-              <div className="flex-shrink-0 w-2 h-2 bg-red-500 rounded-full mt-2"></div>
+          {attacks.map((attack, index) => {
+            const isNew = isVeryRecent(attack.timestamp);
+            return (
+              <div
+                key={attack._id || index}
+                className={`flex items-start gap-3 p-3 rounded-md transition-all duration-300 ${
+                  isNew
+                    ? 'bg-red-50 border border-red-200 animate-pulse'
+                    : 'hover:bg-gray-50'
+                }`}
+              >
+                <div className={`flex-shrink-0 w-2 h-2 rounded-full mt-2 ${
+                  isNew ? 'bg-red-600 animate-ping' : 'bg-red-500'
+                }`}></div>
 
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2 mb-1">
-                  <span
-                    className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${getAttackTypeColor(
-                      attack.attack_type
-                    )}`}
-                  >
-                    {getAttackTypeName(attack.attack_type)}
-                  </span>
-                  <span className="text-xs text-gray-500">
-                    {formatDistanceToNow(new Date(attack.timestamp), {
-                      addSuffix: true,
-                      locale: vi,
-                    })}
-                  </span>
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 mb-1">
+                    {isNew && (
+                      <span className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-bold bg-red-600 text-white">
+                        <Zap className="w-3 h-3 mr-0.5" />
+                        MỚI
+                      </span>
+                    )}
+                    <span
+                      className={`inline-flex items-center px-2 py-0.5 rounded text-xs font-medium ${getAttackTypeColor(
+                        attack.attack_type
+                      )}`}
+                    >
+                      {getAttackTypeName(attack.attack_type)}
+                    </span>
+                    <span className="text-xs text-gray-500">
+                      {formatRelativeTime(attack.timestamp)}
+                    </span>
+                  </div>
+
+                  <p className="text-sm text-gray-900 font-medium">
+                    {attack.ip_address}
+                  </p>
+                  <p className="text-xs text-gray-500 truncate">
+                    {attack.method} {attack.endpoint}
+                  </p>
                 </div>
-
-                <p className="text-sm text-gray-900 font-medium">
-                  {attack.ip_address}
-                </p>
-                <p className="text-xs text-gray-500 truncate">
-                  {attack.method} {attack.endpoint}
-                </p>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       )}
     </div>

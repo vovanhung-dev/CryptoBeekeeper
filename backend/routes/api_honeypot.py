@@ -18,6 +18,96 @@ def init_honeypot_routes(logger, w3_service, wallet):
     wallet_model = wallet
 
 
+@honeypot_bp.route('/wallet/list', methods=['GET'])
+def list_wallets():
+    """API lấy danh sách tất cả fake wallets"""
+
+    if wallet_model is None:
+        return jsonify({
+            'success': False,
+            'message': 'Database chưa được kết nối'
+        }), 503
+
+    try:
+        limit = request.args.get('limit', 100, type=int)
+        skip = request.args.get('skip', 0, type=int)
+
+        result = wallet_model.get_all(limit=limit, skip=skip)
+
+        return jsonify({
+            'success': True,
+            'data': result
+        }), 200
+
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': f'Lỗi lấy danh sách ví: {str(e)}'
+        }), 500
+
+
+@honeypot_bp.route('/wallet/<address>', methods=['GET'])
+def get_wallet_detail(address):
+    """API lấy chi tiết một wallet"""
+
+    if wallet_model is None:
+        return jsonify({
+            'success': False,
+            'message': 'Database chưa được kết nối'
+        }), 503
+
+    try:
+        wallet = wallet_model.get_by_address(address)
+
+        if not wallet:
+            return jsonify({
+                'success': False,
+                'message': 'Không tìm thấy ví'
+            }), 404
+
+        return jsonify({
+            'success': True,
+            'data': wallet
+        }), 200
+
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': f'Lỗi: {str(e)}'
+        }), 500
+
+
+@honeypot_bp.route('/wallet/<address>', methods=['DELETE'])
+def delete_wallet(address):
+    """API xóa wallet"""
+
+    if wallet_model is None:
+        return jsonify({
+            'success': False,
+            'message': 'Database chưa được kết nối'
+        }), 503
+
+    try:
+        result = wallet_model.collection.delete_one({'address': address})
+
+        if result.deleted_count > 0:
+            return jsonify({
+                'success': True,
+                'message': 'Đã xóa ví thành công'
+            }), 200
+        else:
+            return jsonify({
+                'success': False,
+                'message': 'Không tìm thấy ví để xóa'
+            }), 404
+
+    except Exception as e:
+        return jsonify({
+            'success': False,
+            'message': f'Lỗi xóa ví: {str(e)}'
+        }), 500
+
+
 @honeypot_bp.route('/wallet/create', methods=['POST'])
 def create_wallet():
     """API tạo wallet mới (HONEYPOT - fake)"""

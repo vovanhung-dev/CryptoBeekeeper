@@ -16,8 +16,10 @@ from services.analyzer import AttackAnalyzer
 from routes import (
     honeypot_bp,
     analytics_bp,
+    settings_bp,
     init_honeypot_routes,
-    init_analytics_routes
+    init_analytics_routes,
+    init_settings_routes
 )
 
 # Middleware
@@ -98,11 +100,14 @@ def create_app():
     print(f"[DEBUG] honeypot_bp registered with prefix: {honeypot_bp.url_prefix}")
     app.register_blueprint(analytics_bp)
     print(f"[DEBUG] analytics_bp registered with prefix: {analytics_bp.url_prefix}")
+    app.register_blueprint(settings_bp)
+    print(f"[DEBUG] settings_bp registered with prefix: {settings_bp.url_prefix}")
 
     # Initialize routes dependencies AFTER
     print("[DEBUG] Initializing route dependencies...")
     init_honeypot_routes(attack_logger, web3_service, wallet_model)
     init_analytics_routes(attack_log_model, analyzer)
+    init_settings_routes(db)
 
     logger.info("[OK] Da dang ky tat ca routes")
     print("[OK] Da dang ky tat ca routes")
@@ -122,7 +127,8 @@ def create_app():
             'status': 'running',
             'endpoints': {
                 'honeypot': '/api/*',
-                'analytics': '/api/analytics/*'
+                'analytics': '/api/analytics/*',
+                'settings': '/api/settings/*'
             }
         }), 200
 

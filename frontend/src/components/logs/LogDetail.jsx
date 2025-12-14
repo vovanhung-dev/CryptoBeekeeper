@@ -1,20 +1,10 @@
 import React from 'react';
 import Modal from '../common/Modal';
 import { Calendar, Globe, Monitor, Code } from 'lucide-react';
+import { formatDate } from '../../utils/formatters';
 
 const LogDetail = ({ log, isOpen, onClose }) => {
   if (!log) return null;
-
-  const formatDate = (dateString) => {
-    return new Date(dateString).toLocaleString('vi-VN', {
-      year: 'numeric',
-      month: 'long',
-      day: 'numeric',
-      hour: '2-digit',
-      minute: '2-digit',
-      second: '2-digit',
-    });
-  };
 
   return (
     <Modal isOpen={isOpen} onClose={onClose} title="Chi tiết tấn công" size="lg">
@@ -26,7 +16,7 @@ const LogDetail = ({ log, isOpen, onClose }) => {
               <Calendar className="w-4 h-4" />
               <span className="text-sm font-medium">Thời gian</span>
             </div>
-            <p className="text-sm text-gray-900">{formatDate(log.timestamp)}</p>
+            <p className="text-sm text-gray-900">{formatDate(log.timestamp, 'long')}</p>
           </div>
 
           <div>

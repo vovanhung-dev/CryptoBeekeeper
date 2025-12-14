@@ -1,16 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { FileText, Download, Calendar, Filter } from 'lucide-react';
+import React, { useState, useEffect, useRef } from 'react';
+import { FileText, Download, Calendar, Filter, Printer } from 'lucide-react';
 import LoadingSpinner from '../components/common/LoadingSpinner';
 import { useToast } from '../components/common/Toast';
 import { analyticsAPI } from '../services/api';
 
 const Reports = () => {
   const toast = useToast();
+  const reportRef = useRef(null);
 
   const [loading, setLoading] = useState(false);
   const [reportType, setReportType] = useState('attacks');
   const [timeRange, setTimeRange] = useState(7);
   const [stats, setStats] = useState(null);
+  const [exporting, setExporting] = useState(false);
 
   useEffect(() => {
     loadReportData();
@@ -41,7 +43,236 @@ const Reports = () => {
   };
 
   const handleExportPDF = () => {
-    toast.info('Tính năng xuất PDF đang được phát triển');
+    if (!stats) {
+      toast.error('Không có dữ liệu để xuất báo cáo');
+      return;
+    }
+
+    setExporting(true);
+
+    // Tạo nội dung HTML cho PDF
+    const reportDate = new Date().toLocaleDateString('vi-VN', {
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric',
+      hour: '2-digit',
+      minute: '2-digit'
+    });
+
+    const timeRangeText = timeRange === 7 ? '7 ngày qua' : timeRange === 30 ? '30 ngày qua' : '90 ngày qua';
+
+    const printContent = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="utf-8">
+        <title>Báo cáo CryptoBeekeeper</title>
+        <style>
+          * { margin: 0; padding: 0; box-sizing: border-box; }
+          body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 40px;
+            color: #1f2937;
+            line-height: 1.6;
+          }
+          .header {
+            text-align: center;
+            border-bottom: 3px solid #2563eb;
+            padding-bottom: 20px;
+            margin-bottom: 30px;
+          }
+          .header h1 {
+            font-size: 28px;
+            color: #1e40af;
+            margin-bottom: 8px;
+          }
+          .header p {
+            color: #6b7280;
+            font-size: 14px;
+          }
+          .section {
+            margin-bottom: 30px;
+            page-break-inside: avoid;
+          }
+          .section-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 15px;
+            padding-bottom: 8px;
+            border-bottom: 1px solid #e5e7eb;
+          }
+          .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 15px;
+            margin-bottom: 20px;
+          }
+          .stat-card {
+            background: #f3f4f6;
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+          }
+          .stat-label {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 5px;
+          }
+          .stat-value {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1f2937;
+          }
+          .ip-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 10px;
+          }
+          .ip-table th, .ip-table td {
+            padding: 10px 15px;
+            text-align: left;
+            border-bottom: 1px solid #e5e7eb;
+          }
+          .ip-table th {
+            background: #f3f4f6;
+            font-weight: 600;
+            color: #374151;
+          }
+          .ip-table tr:hover {
+            background: #f9fafb;
+          }
+          .trend-box {
+            display: flex;
+            gap: 30px;
+            background: #f3f4f6;
+            padding: 20px;
+            border-radius: 8px;
+          }
+          .trend-item {
+            flex: 1;
+          }
+          .trend-label {
+            font-size: 12px;
+            color: #6b7280;
+            margin-bottom: 5px;
+          }
+          .trend-value {
+            font-size: 20px;
+            font-weight: 600;
+            color: #1f2937;
+          }
+          .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e5e7eb;
+            text-align: center;
+            color: #9ca3af;
+            font-size: 12px;
+          }
+          @media print {
+            body { padding: 20px; }
+            .section { page-break-inside: avoid; }
+          }
+        </style>
+      </head>
+      <body>
+        <div class="header">
+          <h1>🐝 CryptoBeekeeper - Báo cáo Honeypot</h1>
+          <p>Ngày tạo: ${reportDate} | Khoảng thời gian: ${timeRangeText}</p>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Tổng quan hệ thống</h2>
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-label">Tổng tấn công</div>
+              <div class="stat-value">${stats.general.total_attacks || 0}</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Tấn công hôm nay</div>
+              <div class="stat-value">${stats.general.today_attacks || 0}</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">IP độc nhất</div>
+              <div class="stat-value">${stats.general.top_ips?.length || 0}</div>
+            </div>
+            <div class="stat-card">
+              <div class="stat-label">Loại tấn công</div>
+              <div class="stat-value">${stats.general.attack_types?.length || 0}</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Xu hướng tấn công</h2>
+          <div class="trend-box">
+            <div class="trend-item">
+              <div class="trend-label">Xu hướng hiện tại</div>
+              <div class="trend-value">${
+                stats.trends.trend === 'increasing' ? '📈 Tăng' :
+                stats.trends.trend === 'decreasing' ? '📉 Giảm' : '➡️ Ổn định'
+              }</div>
+            </div>
+            <div class="trend-item">
+              <div class="trend-label">Trung bình mỗi ngày</div>
+              <div class="trend-value">${stats.trends.average_per_day || 0} cuộc</div>
+            </div>
+            <div class="trend-item">
+              <div class="trend-label">Tổng trong khoảng thời gian</div>
+              <div class="trend-value">${stats.trends.total || 0} cuộc</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="section">
+          <h2 class="section-title">Top 10 IP tấn công nhiều nhất</h2>
+          <table class="ip-table">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>Địa chỉ IP</th>
+                <th>Số lần tấn công</th>
+              </tr>
+            </thead>
+            <tbody>
+              ${stats.topIPs.slice(0, 10).map((ip, index) => `
+                <tr>
+                  <td>${index + 1}</td>
+                  <td style="font-family: monospace;">${ip._id}</td>
+                  <td><strong>${ip.count}</strong> lần</td>
+                </tr>
+              `).join('')}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="footer">
+          <p>CryptoBeekeeper Honeypot System - Báo cáo được tạo tự động</p>
+          <p>Mô phỏng ví tiền điện tử nhằm nghiên cứu hành vi tấn công</p>
+        </div>
+      </body>
+      </html>
+    `;
+
+    // Mở cửa sổ in mới
+    const printWindow = window.open('', '_blank');
+    if (printWindow) {
+      printWindow.document.write(printContent);
+      printWindow.document.close();
+
+      // Đợi nội dung load xong rồi in
+      printWindow.onload = () => {
+        printWindow.print();
+        // Không đóng cửa sổ ngay để user có thể lưu PDF
+      };
+
+      toast.success('Đang mở cửa sổ in - Chọn "Save as PDF" để lưu');
+    } else {
+      toast.error('Không thể mở cửa sổ in. Vui lòng tắt popup blocker');
+    }
+
+    setExporting(false);
   };
 
   const handleExportCSV = async () => {
@@ -84,9 +315,22 @@ const Reports = () => {
             <Download className="w-4 h-4" />
             Xuất CSV
           </button>
-          <button onClick={handleExportPDF} className="btn-primary flex items-center gap-2">
-            <FileText className="w-4 h-4" />
-            Xuất PDF
+          <button
+            onClick={handleExportPDF}
+            disabled={exporting || !stats}
+            className="btn-primary flex items-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+          >
+            {exporting ? (
+              <>
+                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                Đang xuất...
+              </>
+            ) : (
+              <>
+                <Printer className="w-4 h-4" />
+                Xuất PDF
+              </>
+            )}
           </button>
         </div>
       </div>

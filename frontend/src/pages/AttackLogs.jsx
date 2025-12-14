@@ -6,6 +6,7 @@ import LoadingSpinner from '../components/common/LoadingSpinner';
 import LogDetail from '../components/logs/LogDetail';
 import { useToast } from '../components/common/Toast';
 import { analyticsAPI } from '../services/api';
+import { formatDate } from '../utils/formatters';
 
 const AttackLogs = () => {
   const toast = useToast();
@@ -86,7 +87,7 @@ const AttackLogs = () => {
     {
       key: 'timestamp',
       label: 'Thời gian',
-      render: (value) => new Date(value).toLocaleString('vi-VN'),
+      render: (value) => formatDate(value, 'full'),
     },
     {
       key: 'ip_address',

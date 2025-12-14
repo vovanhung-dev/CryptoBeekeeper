@@ -1,5 +1,5 @@
 import React from 'react';
-import { Menu, Bell, Search } from 'lucide-react';
+import { Menu, Bell, Search, Shield } from 'lucide-react';
 
 const Header = ({ onMenuClick }) => {
   return (
@@ -16,7 +16,7 @@ const Header = ({ onMenuClick }) => {
 
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
-              <span className="text-white text-lg font-semibold">🐝</span>
+              <Shield className="w-5 h-5 text-white" />
             </div>
             <div>
               <h1 className="text-lg font-semibold text-gray-900">CryptoBeekeeper</h1>

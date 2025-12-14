@@ -6,6 +6,8 @@ import {
   BarChart3,
   Settings,
   FileText,
+  Wallet,
+  Zap,
 } from 'lucide-react';
 
 const Sidebar = ({ isOpen, onClose }) => {
@@ -14,6 +16,16 @@ const Sidebar = ({ isOpen, onClose }) => {
       name: 'Tổng quan',
       path: '/',
       icon: LayoutDashboard,
+    },
+    {
+      name: 'Quản lý ví giả',
+      path: '/wallets',
+      icon: Wallet,
+    },
+    {
+      name: 'Mô phỏng tấn công',
+      path: '/simulation',
+      icon: Zap,
     },
     {
       name: 'Nhật ký tấn công',
